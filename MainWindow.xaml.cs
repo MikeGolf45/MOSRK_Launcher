@@ -42,19 +42,6 @@ namespace MOSRK_Launcher
                 {
                     permArrowCheck.IsChecked = true;
                 }
-                if (_settings is { KhazadJourneySkip: true })
-                {
-                    khazadStartCheck.IsChecked = true;
-                }
-                if (_settings is { JavelinRunAnims: true })
-                {
-                    javelinAnimsCheck.IsChecked = true;
-                }
-                if (_settings is { AgoTextures: true })
-                {
-                    mapTexturesCheck.IsChecked = true;
-                    _mapTexturesChosen = "ago";
-                }
                 saved.Text = "";
             }
             else
@@ -91,28 +78,6 @@ namespace MOSRK_Launcher
             else
             {
                 laaapplied.Text = LargeAddressAware.IsLargeAddressAware(_exeMed) ? "LAA applied" : "LAA not applied";
-            }
-            var casFiles = gameDir + "/data/models_missile/trollmen_javelin.cas";
-            if (!File.Exists(casFiles))
-            {
-                if (!Directory.Exists(gameDir + "data/models_missile/textures"))
-                {
-                    Directory.CreateDirectory(gameDir + "data/models_missile/textures");
-                }
-                if (Directory.Exists(Cwd + "/data/models_missile"))
-                {
-                    CopyFiles(Cwd + "/data/models_missile", gameDir + "/data/models_missile");
-                }
-            }
-
-            if (File.Exists(casFiles)) return;
-            {
-                const string messageBoxText = "You have not installed the missile cas models into your Medieval 2 directory. Install the latest hotfix correctly";
-                const string caption = "Missing game files";
-                const MessageBoxButton button = MessageBoxButton.OK;
-                const MessageBoxImage icon = MessageBoxImage.Warning;
-
-                MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.Yes);
             }
         }
 
@@ -189,26 +154,12 @@ namespace MOSRK_Launcher
             Application.Current.Shutdown();
         }
 
-        private bool _mapTextures;
-        private bool _javelinAnims;
         private bool _permArrow;
-        private bool _khazadStart;
 
         private static readonly string Cwd = Directory.GetCurrentDirectory();
 
 
-        private void mapTexturesCheck_Checked(object sender, RoutedEventArgs e)
-        {
-            _mapTextures = true;
-            saved.Text = "Unsaved settings!";
-        }
 
-        private void javelinAnimsCheck_Checked(object sender, RoutedEventArgs e)
-        {
-            _javelinAnims = true;
-            saved.Text = "Unsaved settings!";
-
-        }
 
         private void permArrowCheck_Checked(object sender, RoutedEventArgs e)
         {
@@ -216,34 +167,9 @@ namespace MOSRK_Launcher
             saved.Text = "Unsaved settings!";
         }
 
-        private void khazadStartCheck_Checked(object sender, RoutedEventArgs e)
-        {
-            _khazadStart = true;
-            saved.Text = "Unsaved settings!";
-        }
-
-        private void mapTexturesCheck_Unchecked(object sender, RoutedEventArgs e)
-        {
-            _mapTextures = false;
-            saved.Text = "Unsaved settings!";
-        }
-
-        private void javelinAnimsCheck_Unchecked(object sender, RoutedEventArgs e)
-        {
-            _javelinAnims = false;
-            saved.Text = "Unsaved settings!";
-        }
-
-
         private void permArrowCheck_Unchecked(object sender, RoutedEventArgs e)
         {
             _permArrow = false;
-            saved.Text = "Unsaved settings!";
-
-        }
-        private void khazadStartCheck_Unchecked(object sender, RoutedEventArgs e)
-        {
-            _khazadStart = false;
             saved.Text = "Unsaved settings!";
 
         }
@@ -257,43 +183,6 @@ namespace MOSRK_Launcher
         {
             string sourceDir;
             var destinationDir = Cwd + "/data";
-
-            if (_mapTextures)
-            {
-                sourceDir = Cwd + "/extra/agoCampaignTextures";
-                if (_mapTexturesChosen == "vanilla")
-                {
-                    if (File.Exists(destinationDir + "/world/maps/base/map.rwm"))
-                    {
-                        File.Delete(destinationDir + "/world/maps/base/map.rwm");
-                    }
-                }
-            }
-            else
-            {
-                sourceDir = Cwd + "/extra/agoCampaignTexturesVanilla";
-                if (_mapTexturesChosen == "ago")
-                {
-                    if (File.Exists(destinationDir + "/world/maps/base/map.rwm"))
-                    {
-                        File.Delete(destinationDir + "/world/maps/base/map.rwm");
-                    }
-                }
-            }
-            CopyFiles(sourceDir, destinationDir);
-            if (_settings != null) _settings.AgoTextures = _mapTextures;
-
-            if (_javelinAnims)
-            {
-                sourceDir = Cwd + "/extra/ebiiJavelins";
-            }
-            else
-            {
-                sourceDir = Cwd + "/extra/ebiiJavelinsVanilla";
-            }
-            CopyFiles(sourceDir, destinationDir);
-            if (_settings != null) _settings.JavelinRunAnims = _javelinAnims;
-
             if (_permArrow)
             {
                 sourceDir = Cwd + "/extra/permArrow";
@@ -304,26 +193,7 @@ namespace MOSRK_Launcher
             }
             CopyFiles(sourceDir, destinationDir);
             if (_settings != null) _settings.PermanentArrows = _permArrow;
-
-            if (_khazadStart)
-            {
-                sourceDir = Cwd + "/extra/kdSkip";
-            }
-            else
-            {
-                sourceDir = Cwd + "/extra/kdSkipVanilla";
-            }
-            CopyFiles(sourceDir, destinationDir);
-            if (_settings != null) _settings.KhazadJourneySkip = _khazadStart;
-            if (File.Exists(destinationDir + "/text/export_units.txt.strings.bin"))
-            {
-                File.Delete(destinationDir + "/text/export_units.txt.strings.bin");
-            }
-            if (File.Exists(destinationDir + "/text/historic_events.txt.strings.bin"))
-            {
-                File.Delete(destinationDir + "/text/historic_events.txt.strings.bin");
-            }
-
+            
             var json = JsonConvert.SerializeObject(_settings, Formatting.Indented);
             File.WriteAllText(Cwd + "/MOSRK_Config.json", json);
             saved.Text = "Settings saved.";
