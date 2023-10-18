@@ -1,7 +1,7 @@
 
 <div align="center">
   <h1>MOS-Reunited Kingdom: V2 Launcher</h1>
-  <img src="https://i.imgur.com/d7EGGYY.png" width="1920" alt="MOS-RK Launcher" /></a>
+  <img src="https://i.imgur.com/d7EGGYY.png" width="1920" alt="MOSRK Launcher" /></a>
 </div>
 
 The following is a repo for the [MOS:Reunited Kingdom V2.0](https://www.moddb.com/mods/divide-and-conquer) Launcher. The program is used to configure different aspects of the mod, ensure LAA is applied and to launch the mod.
@@ -22,8 +22,8 @@ The launcher currently provides the following configuration options
 - **Skip Khazad-dûm expedition:** Skip the Khazad-dûm expedition at the start of the Khazad-dûm campaign.
 
 ## Download
-The launcher is included as part of the MOS-RK install process but if for whatever reason you want to pick up the latest version, you can grab the latest artifact from the latest commit [here](link).
-The launcher is included as part of the MOS-RK install process but if for whatever reason you want to pick up the latest version, you can grab the latest artifact from the latest commit [here](https://github.com/MikeGolf45/MOSRK_Launcher/actions/workflows/build-mosrk-launcher.yml).
+The launcher is included as part of the MOSRK install process but if for whatever reason you want to pick up the latest version, you can grab the latest artifact from the latest commit [here](link).
+The launcher is included as part of the MOSRK install process but if for whatever reason you want to pick up the latest version, you can grab the latest artifact from the latest commit [here](https://github.com/MikeGolf45/MOSRK_Launcher/actions/workflows/build-mosrk-launcher.yml).
 
 ## Building from source
 
@@ -34,4 +34,4 @@ The launcher is included as part of the MOS-RK install process but if for whatev
 #### Build the executable
 `dotnet publish -c Release --no-restore`
 #### Run the executable
-`bin\Release\net6.0-windows\win-x86\publish\MOS-RK_Launcher.exe`
+`bin\Release\net6.0-windows\win-x86\publish\MOSRK_Launcher.exe`
