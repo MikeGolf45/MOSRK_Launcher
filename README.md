@@ -23,4 +23,15 @@ The launcher currently provides the following configuration options
 
 ## Download
 The launcher is included as part of the MOS-RK install process but if for whatever reason you want to pick up the latest version, you can grab the latest artifact from the latest commit [here](link).
-The launcher is included as part of the MOS-RK install process but if for whatever reason you want to pick up the latest version, you can grab the latest artifact from the latest commit [here](https://github.com/FynnTW/DaC_Launcher/actions/workflows/build-dac-launcher.yml).
+The launcher is included as part of the MOS-RK install process but if for whatever reason you want to pick up the latest version, you can grab the latest artifact from the latest commit [here](https://github.com/FynnTW/DaC_Launcher/actions/workflows/build-mos-rk-launcher.yml).
+
+## Building from source
+
+#### [Install .NET 6.0 and verify installation](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+`dotnet --version`
+#### Install the dependencies
+`dotnet restore`
+#### Build the executable
+`dotnet publish -c Release --no-restore`
+#### Run the executable
+`bin\Release\net6.0-windows\win-x86\publish\MOS-RK_Launcher.exe`
