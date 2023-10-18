@@ -22,7 +22,6 @@ The launcher currently provides the following configuration options
 - **Skip Khazad-dûm expedition:** Skip the Khazad-dûm expedition at the start of the Khazad-dûm campaign.
 
 ## Download
-The launcher is included as part of the MOSRK install process but if for whatever reason you want to pick up the latest version, you can grab the latest artifact from the latest commit [here](link).
 The launcher is included as part of the MOSRK install process but if for whatever reason you want to pick up the latest version, you can grab the latest artifact from the latest commit [here](https://github.com/MikeGolf45/MOSRK_Launcher/actions/workflows/build-mosrk-launcher.yml).
 
 ## Building from source
