@@ -27,7 +27,7 @@ namespace DaC_Launcher
             }
             catch (Exception e)
             {
-                MessageBox.Show($"Start not possible or Exception occurs {e}  ", "DaC Launcher Error");
+                MessageBox.Show($"Start not possible or Exception occurs {e}  ", "MOS-RK Launcher Error");
             }
         }
 
@@ -35,9 +35,9 @@ namespace DaC_Launcher
 
         private void LoadSettings()
         {
-            if (File.Exists(Cwd + "/DaC_Config.json"))
+            if (File.Exists(Cwd + "/MOS-RK_Config.json"))
             {
-                _settings = JsonConvert.DeserializeObject<Settings>(File.ReadAllText(Cwd + "/DaC_Config.json"));
+                _settings = JsonConvert.DeserializeObject<Settings>(File.ReadAllText(Cwd + "/MOS-RK_Config.json"));
                 if (_settings is { PermanentArrows: true })
                 {
                     permArrowCheck.IsChecked = true;
@@ -76,7 +76,7 @@ namespace DaC_Launcher
             _exeKingdoms = gameDir + "/kingdoms.exe";
             if (!File.Exists(_exeMed) && (!File.Exists(_exeKingdoms)))
             {
-                const string messageBoxText = "You have installed Divide & Conquer into the wrong location, no game executables were found. Check your path to the mod folder.";
+                const string messageBoxText = "You have installed MOS: Reunited Kingdom into the wrong location, no game executables were found. Check your path to the mod folder.";
                 const string caption = "Wrong installation!";
                 const MessageBoxButton button = MessageBoxButton.OK;
                 const MessageBoxImage icon = MessageBoxImage.Warning;
@@ -193,7 +193,6 @@ namespace DaC_Launcher
         private bool _javelinAnims;
         private bool _permArrow;
         private bool _khazadStart;
-        private bool _bypassLauncher;
 
         private static readonly string Cwd = Directory.GetCurrentDirectory();
 
@@ -235,17 +234,6 @@ namespace DaC_Launcher
             saved.Text = "Unsaved settings!";
         }
 
-        private void bypassLauncherCheck_Checked(object sender, RoutedEventArgs e)
-        {
-            _bypassLauncher = true;
-            saved.Text = "Unsaved settings!";
-        }
-
-        private void bypassLauncherCheck_Unchecked(object sender, RoutedEventArgs e)
-        {
-            _bypassLauncher = false;
-            saved.Text = "Unsaved settings!";
-        }
 
         private void permArrowCheck_Unchecked(object sender, RoutedEventArgs e)
         {
