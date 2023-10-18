@@ -1,7 +1,7 @@
 ﻿
 using System.Windows;
 
-namespace MOS-RK_Launcher
+namespace MOSRK_Launcher
 {
     /// <summary>
     /// Interaction logic for App.xaml
