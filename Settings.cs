@@ -1,4 +1,4 @@
-﻿namespace DaC_Launcher
+﻿namespace MOS-RK_Launcher
 {
     internal class Settings
     {
