@@ -1,4 +1,4 @@
-﻿namespace MOS-RK_Launcher
+﻿namespace MOSRK_Launcher
 {
     internal class Settings
     {
