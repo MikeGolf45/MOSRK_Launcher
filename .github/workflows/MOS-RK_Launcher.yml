@@ -24,12 +24,12 @@ jobs:
       - name: Install dependencies
         run: dotnet restore
 
-      # Build MOS-RK Launcher
+      # Build MOSRK Launcher
       - name: Build
         run: dotnet publish -c Release --no-restore
 
       # Upload build artifact
       - uses: actions/upload-artifact@v3
         with:
-          name: MOS-RK_Launcher
-          path: D:\a\MOS-RK_Launcher\MOS-RK_Launcher\bin\Release\net6.0-windows\win-x86\publish\MOS-RK_Launcher.exe
+          name: MOSRK_Launcher
+          path: D:\a\MOS-RK_Launcher\MOSRK_Launcher\bin\Release\net6.0-windows\win-x86\publish\MOSRK_Launcher.exe
