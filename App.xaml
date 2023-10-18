@@ -1,6 +1,6 @@
-﻿<Application x:Class="MOS-RK_Launcher.App"
+﻿<Application x:Class="MOSRK_Launcher.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:MOS-RK_Launcher"
+             xmlns:local="clr-namespace:MOSRK_Launcher"
              StartupUri="MainWindow.xaml">
 </Application>
