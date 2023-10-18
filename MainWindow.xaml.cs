@@ -6,7 +6,7 @@ using System.IO;
 using System.Windows;
 using System.Windows.Navigation;
 
-namespace DaC_Launcher
+namespace MOS-RK_Launcher
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
