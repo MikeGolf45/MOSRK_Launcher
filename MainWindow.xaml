@@ -1,11 +1,11 @@
-﻿<Window x:Class="DaC_Launcher.MainWindow"
+﻿<Window x:Class="MOS-RK_Launcher.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:local="clr-namespace:DaC_Launcher"
+    xmlns:local="clr-namespace:MOS-RK_Launcher"
     mc:Ignorable="d"
-    Title="DaC Launcher"
+    Title="MOS: Reunited Kingdom Launcher"
     Width="600"
     ResizeMode="CanMinimize"
     WindowStartupLocation="CenterScreen"
@@ -29,13 +29,13 @@
             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="22"
                 Width="Auto" Foreground="AntiqueWhite" FontWeight="Bold" Grid.ColumnSpan="2"
                 FontFamily="Constantia" Margin="0,4,0,0">
-                Optional DaC Settings
+                Optional MOS-RK Settings
             </TextBlock>
             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="13"
                 Width="Auto" Foreground="#CFA985" FontWeight="Bold" Grid.ColumnSpan="3"
                 FontFamily="Constantia"  Margin="0,5,0,0">
                 <Hyperlink
-                    NavigateUri="https://github.com/FynnTW/DaC_Launcher#configuration-options"
+                    NavigateUri="https://github.com/FynnTW/MOS-RK_Launcher#configuration-options"
                     RequestNavigate="Hyperlink_RequestNavigate"
                     Foreground="#CFA985">
                    Click here for more info
@@ -69,15 +69,6 @@
                 FontSize="18" Checked="permArrowCheck_Checked"
                 Unchecked="permArrowCheck_Unchecked" Grid.ColumnSpan="3"
                 ToolTip="Arrows do not disappear from the ground, slight performance impact."
-                VerticalContentAlignment="Center">
-            </CheckBox>
-
-            <!-- Skip launcher -->
-            <CheckBox Foreground="AntiqueWhite" Name="bypassLauncherCheck"
-                Content="Bypass launcher on future start"
-                FontSize="18" Checked="bypassLauncherCheck_Checked"
-                Unchecked="bypassLauncherCheck_Unchecked" Grid.ColumnSpan="3"
-                ToolTip="Start immediately without a GUI popup."
                 VerticalContentAlignment="Center">
             </CheckBox>
 
