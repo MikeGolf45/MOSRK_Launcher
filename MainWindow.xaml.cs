@@ -61,7 +61,7 @@ namespace DaC_Launcher
             {
                 _settings = new Settings();
                 var json = JsonConvert.SerializeObject(_settings, Formatting.Indented);
-                File.WriteAllText(Cwd + "/DaC_Config.json", json);
+                File.WriteAllText(Cwd + "/MOS-RK_Config.json", json);
             }
         }
 
@@ -305,8 +305,6 @@ namespace DaC_Launcher
             CopyFiles(sourceDir, destinationDir);
             if (_settings != null) _settings.PermanentArrows = _permArrow;
 
-            if (_settings != null) _settings.StartInstantly = _bypassLauncher;
-
             if (_khazadStart)
             {
                 sourceDir = Cwd + "/extra/kdSkip";
@@ -327,7 +325,7 @@ namespace DaC_Launcher
             }
 
             var json = JsonConvert.SerializeObject(_settings, Formatting.Indented);
-            File.WriteAllText(Cwd + "/DaC_Config.json", json);
+            File.WriteAllText(Cwd + "/MOS-RK_Config.json", json);
             saved.Text = "Settings saved.";
         }
 
