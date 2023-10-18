@@ -1,7 +1,7 @@
 ﻿
 using System.Windows;
 
-namespace DaC_Launcher
+namespace MOS-RK_Launcher
 {
     /// <summary>
     /// Interaction logic for App.xaml
