@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MOS-RK_Launcher", "MOS-RK_Launcher.csproj", "{AB4767A5-E8CF-46E2-92A8-DD4209E9BAFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MOSRK_Launcher", "MOSRK_Launcher.csproj", "{AB4767A5-E8CF-46E2-92A8-DD4209E9BAFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
