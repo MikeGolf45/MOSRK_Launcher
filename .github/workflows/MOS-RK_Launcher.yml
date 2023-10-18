@@ -1,4 +1,4 @@
-name: build-mos-rk-launcher
+name: build-mosrk-launcher
 
 on: [push]
 
