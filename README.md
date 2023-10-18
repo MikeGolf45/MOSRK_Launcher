@@ -17,3 +17,10 @@ The launcher currently provides the following configuration options
    ![](https://cdn.discordapp.com/attachments/417013331614892042/1129740969659601016/image.png)
    ![](https://cdn.discordapp.com/attachments/417013331614892042/1129740970167128154/image.png)
    ![](https://cdn.discordapp.com/attachments/417013331614892042/1129740971060498502/image.png)
+- **Use running up Javelin animations:** Use alternate javelin animations with which include a running-up, which look slightly more realistic at the cost of being more annoying to manage.
+- **Use permanent arrows:** Arrows do not disappear from the ground, slight performance impact.
+- **Skip Khazad-dûm expedition:** Skip the Khazad-dûm expedition at the start of the Khazad-dûm campaign.
+
+## Download
+The launcher is included as part of the MOS-RK install process but if for whatever reason you want to pick up the latest version, you can grab the latest artifact from the latest commit [here](link).
+The launcher is included as part of the MOS-RK install process but if for whatever reason you want to pick up the latest version, you can grab the latest artifact from the latest commit [here](https://github.com/FynnTW/DaC_Launcher/actions/workflows/build-dac-launcher.yml).
