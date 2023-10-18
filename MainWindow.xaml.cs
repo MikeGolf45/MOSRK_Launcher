@@ -6,7 +6,7 @@ using System.IO;
 using System.Windows;
 using System.Windows.Navigation;
 
-namespace MOS-RK_Launcher
+namespace MOSRK_Launcher
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -27,7 +27,7 @@ namespace MOS-RK_Launcher
             }
             catch (Exception e)
             {
-                MessageBox.Show($"Start not possible or Exception occurs {e}  ", "MOS-RK Launcher Error");
+                MessageBox.Show($"Start not possible or Exception occurs {e}  ", "MOSRK Launcher Error");
             }
         }
 
@@ -35,9 +35,9 @@ namespace MOS-RK_Launcher
 
         private void LoadSettings()
         {
-            if (File.Exists(Cwd + "/MOS-RK_Config.json"))
+            if (File.Exists(Cwd + "/MOSRK_Config.json"))
             {
-                _settings = JsonConvert.DeserializeObject<Settings>(File.ReadAllText(Cwd + "/MOS-RK_Config.json"));
+                _settings = JsonConvert.DeserializeObject<Settings>(File.ReadAllText(Cwd + "/MOSRK_Config.json"));
                 if (_settings is { PermanentArrows: true })
                 {
                     permArrowCheck.IsChecked = true;
@@ -61,7 +61,7 @@ namespace MOS-RK_Launcher
             {
                 _settings = new Settings();
                 var json = JsonConvert.SerializeObject(_settings, Formatting.Indented);
-                File.WriteAllText(Cwd + "/MOS-RK_Config.json", json);
+                File.WriteAllText(Cwd + "/MOSRK_Config.json", json);
             }
         }
 
@@ -325,7 +325,7 @@ namespace MOS-RK_Launcher
             }
 
             var json = JsonConvert.SerializeObject(_settings, Formatting.Indented);
-            File.WriteAllText(Cwd + "/MOS-RK_Config.json", json);
+            File.WriteAllText(Cwd + "/MOSRK_Config.json", json);
             saved.Text = "Settings saved.";
         }
 
