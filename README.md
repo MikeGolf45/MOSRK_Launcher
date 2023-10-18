@@ -23,7 +23,7 @@ The launcher currently provides the following configuration options
 
 ## Download
 The launcher is included as part of the MOS-RK install process but if for whatever reason you want to pick up the latest version, you can grab the latest artifact from the latest commit [here](link).
-The launcher is included as part of the MOS-RK install process but if for whatever reason you want to pick up the latest version, you can grab the latest artifact from the latest commit [here](https://github.com/FynnTW/DaC_Launcher/actions/workflows/build-mos-rk-launcher.yml).
+The launcher is included as part of the MOS-RK install process but if for whatever reason you want to pick up the latest version, you can grab the latest artifact from the latest commit [here](https://github.com/MikeGolf45/MOSRK_Launcher/actions/workflows/build-mosrk-launcher.yml).
 
 ## Building from source
 
