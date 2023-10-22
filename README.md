@@ -9,7 +9,7 @@ The following is a repo for the [MOS: Reunited Kingdom V2.0](https://www.moddb.c
   <img src="https://github.com/FynnTW/DaC_Launcher/assets/22448079/d84f2825-f72e-437b-9888-cf6c0b864c70" width="1920" alt="MOSRK Launcher" /></a>
 
 ## Configuration Options
-The launcher currently provides the following configuration options
+The launcher currently provides the following configuration options:
 
 - **Permanent Arrows:** Ensures that arrows embedded in the ground stay for the duration of the battle and do not disappear. Has a small performance impact for low-end PCs.
 - **Use alternate strategy textures:** Use the strategy map textures from the AGO mod, with a more realistic satellite art style.
