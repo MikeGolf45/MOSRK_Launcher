@@ -72,6 +72,15 @@
                 VerticalContentAlignment="Center">
             </CheckBox>
 
+            <!-- Skip launcher -->
+            <CheckBox Foreground="AntiqueWhite" Name="bypassLauncherCheck"
+                Content="Bypass launcher on future start"
+                FontSize="18" Checked="bypassLauncherCheck_Checked"
+                Unchecked="bypassLauncherCheck_Unchecked" Grid.ColumnSpan="3"
+                ToolTip="Start immediately without a GUI popup."
+                VerticalContentAlignment="Center">
+            </CheckBox>
+
             <!-- Khazad-Dum Start -->
             <CheckBox Name="khazadStartCheck" Content="Skip Khazad-dûm expedition"
                 Foreground="AntiqueWhite"
