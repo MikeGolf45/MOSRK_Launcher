@@ -193,6 +193,7 @@ namespace MOSRK_Launcher
         private bool _javelinAnims;
         private bool _permArrow;
         private bool _khazadStart;
+        private bool _bypassLauncher;
 
         private static readonly string Cwd = Directory.GetCurrentDirectory();
 
@@ -231,6 +232,18 @@ namespace MOSRK_Launcher
         private void javelinAnimsCheck_Unchecked(object sender, RoutedEventArgs e)
         {
             _javelinAnims = false;
+            saved.Text = "Unsaved settings!";
+        }
+
+        private void bypassLauncherCheck_Checked(object sender, RoutedEventArgs e)
+        {
+            _bypassLauncher = true;
+            saved.Text = "Unsaved settings!";
+        }
+
+        private void bypassLauncherCheck_Unchecked(object sender, RoutedEventArgs e)
+        {
+            _bypassLauncher = false;
             saved.Text = "Unsaved settings!";
         }
 
@@ -303,6 +316,8 @@ namespace MOSRK_Launcher
             }
             CopyFiles(sourceDir, destinationDir);
             if (_settings != null) _settings.PermanentArrows = _permArrow;
+
+            if (_settings != null) _settings.StartInstantly = _bypassLauncher;
 
             if (_khazadStart)
             {
